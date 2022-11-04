@@ -4,11 +4,11 @@ Vmware Vcenter Server
 Ubuntu Base template 
 
 Following Playbook to Clone the VM's from the base template.
-https://github.com/rahulrajvn/vmware-ansible/blob/master/k8s/Infra-build.yml
+https://github.com/rahulrajvn/vmware-ansible/blob/main/vm-cloning/Infra-Build.yml
 
 
 Following Playbook to Clean up the VM's, Shutdown and Delete. 
-https://github.com/rahulrajvn/vmware-ansible/blob/master/k8s/Infra-Cleanup.yml
+https://github.com/rahulrajvn/vmware-ansible/blob/main/vm-cloning/Infra-Cleanup.yml
 
 
 Create the Secret file with following details and run with ansible-playvood with -e @sc
