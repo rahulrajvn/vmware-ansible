@@ -1,0 +1,29 @@
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+  - name: Shutdown the template
+    vmware_guest:
+      hostname: "{{ vcenter_server }}"
+      username: "{{ vcenter_user }}"
+      password: "{{ vcenter_pass }}"
+      validate_certs: False
+      name: "{{ item}}"
+      datacenter: "{{ datacenter_name }}"
+      folder: /{{ datacenter_name }}/vm
+      state: poweredoff
+      wait_for_ip_address: yes
+    loop: "{{ serv }}" 
+
+  - name: Delete the template
+    vmware_guest:
+      hostname: "{{ vcenter_server }}"
+      username: "{{ vcenter_user }}"
+      password: "{{ vcenter_pass }}"
+      validate_certs: False
+      name: "{{ item}}"
+      datacenter: "{{ datacenter_name }}"
+      folder: /{{ datacenter_name }}/vm
+      state: absent
+      wait_for_ip_address: yes
+    loop: "{{ serv }}" 

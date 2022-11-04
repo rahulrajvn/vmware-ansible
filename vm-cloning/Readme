@@ -1,0 +1,26 @@
+Following are the Anisble Playbooks to deploy an Kubernetes Cluster Over a Vmware environment. 
+
+Vmware Vcenter Server
+Ubuntu Base template 
+
+Following Playbook to Clone the VM's from the base template.
+https://github.com/rahulrajvn/vmware-ansible/blob/master/k8s/Infra-build.yml
+
+
+Following Playbook to Clean up the VM's, Shutdown and Delete. 
+https://github.com/rahulrajvn/vmware-ansible/blob/master/k8s/Infra-Cleanup.yml
+
+
+Create the Secret file with following details and run with ansible-playvood with -e @sc
+==
+vcenter_server: "XX.XX.XX.XX"
+vcenter_user: "USERNAME"
+vcenter_pass: "PASSWORD"
+datacenter_name: "DC_NAME"
+cluster_name: "CLUSTER_NAME"
+template_vm:  "TEMPLATE VM NAME TO BE USED"
+serv:
+  - Sever1 << Give the required server name>>
+  - Sever2 << Give the required server name>>
+  - Sever3 << Give the required server name>>
+ ==
