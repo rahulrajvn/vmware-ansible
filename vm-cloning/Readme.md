@@ -16,7 +16,7 @@ https://github.com/rahulrajvn/vmware-ansible/blob/main/vm-cloning/Infra-Cleanup.
 Create the Secret file with following details and run with ansible-playvood with -e @secret-vars.yml
 ==
 secret-vars.yml
-==
+
 vcenter_server: "XX.XX.XX.XX"
 vcenter_user: "USERNAME"
 vcenter_pass: "PASSWORD"
@@ -27,4 +27,5 @@ serv:
   - Sever1 << Give the required server name>>
   - Sever2 << Give the required server name>>
   - Sever3 << Give the required server name>>
- ==
+
+
