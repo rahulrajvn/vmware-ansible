@@ -10,7 +10,7 @@
       validate_certs: False
       name: "{{ item}}"
       datacenter: "{{ datacenter_name }}"
-      folder: /{{ datacenter_name }}/vm
+      folder: "{{ folder_name }}"
       state: poweredoff
       wait_for_ip_address: yes
     loop: "{{ serv }}" 
@@ -23,7 +23,7 @@
       validate_certs: False
       name: "{{ item}}"
       datacenter: "{{ datacenter_name }}"
-      folder: /{{ datacenter_name }}/vm
+      folder: "{{ folder_name }}"
       state: absent
       wait_for_ip_address: yes
     loop: "{{ serv }}" 

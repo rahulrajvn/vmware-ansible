@@ -27,7 +27,7 @@ vcenter_server: "XX.XX.XX.XX"
 vcenter_user: "USERNAME"
 vcenter_pass: "PASSWORD"
 datacenter_name: "DC_NAME"
-cluster_name: "CLUSTER_NAME"
+folder_name: "FOLDER_NAME"
 template_vm:  "TEMPLATE VM NAME TO BE USED"
 serv:
   - Sever1 << Give the required server name>>
