@@ -1,3 +1,4 @@
 
 vm-cloning/secret-vars.yml
 vm-cloning/ansible.cfg
+vm-cloning/secret-vars-k8s.yml
